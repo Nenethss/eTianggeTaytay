@@ -1,0 +1,70 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.landing-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(1 51 160);
+    width: 100%;
+}
+
+.landing-footer p {
+    color: white;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.sub-container {
+    width: 100%;
+    height: 500px;
+    position: relative; /* To position the overlay correctly */
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dark overlay */
+.sub-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 24, 65, 0.5); /* Black with 40% opacity */
+    z-index: 1; /* Ensures it overlays the background */
+}
+
+/* Content inside the sub-container */
+.sub-container-content {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2; /* Above the overlay */
+    color: white; /* Makes text visible */
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.explore { 
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background-color: #121315;
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}

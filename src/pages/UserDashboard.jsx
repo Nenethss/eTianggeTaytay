@@ -8,7 +8,7 @@ const UserDashboard = () => {
 
     return (
         <div>
-            <h1>User Dashboard</h1>
+            <h1>Store Dashboard</h1>
             <button onClick={handleLogout}>Logout</button>
             {/* Add other user features here */}
         </div>

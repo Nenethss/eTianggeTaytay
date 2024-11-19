@@ -10,7 +10,7 @@ const AdminDashboard = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("user");
-        navigate("/"); // Redirect to login page
+        navigate("/login"); // Redirect to login page
     };
 
     const handleAccountClick = () => {

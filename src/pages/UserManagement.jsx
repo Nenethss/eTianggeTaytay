@@ -34,17 +34,20 @@ const UserManagement = () => {
     const handleAddAdmin = async () => {
         if (!newAdmin.username || !newAdmin.email || !newAdmin.password || !newAdmin.confirmPassword) {
             setMessage("All fields are required.");
+            setIsMessageModalOpen(true); // Open the message modal for validation error
             return;
         }
-
+    
         if (newAdmin.password !== newAdmin.confirmPassword) {
             setMessage("Password and Confirm Password must match.");
+            setIsMessageModalOpen(true); // Open the message modal for validation error
             return;
         }
-
+    
         try {
             const response = await axios.post("http://localhost/eTianggeTaytay/server/addAdmin.php", newAdmin);
             console.log("Add Admin Response:", response.data);
+    
             if (response.data.success) {
                 setMessage("Admin added successfully.");
                 setUsers((prev) => [...prev, response.data.admin]); // Add new admin to the table
@@ -56,16 +59,12 @@ const UserManagement = () => {
         } catch (error) {
             console.error("Add Admin Error:", error);
             setMessage("An error occurred while adding the admin.");
+        } finally {
+            setIsMessageModalOpen(true); // Show the modal regardless of success or failure
+            setTimeout(() => setIsMessageModalOpen(false), 3000); // Automatically close the modal after 3 seconds
         }
-
-        // Open the message modal
-        setIsMessageModalOpen(true);
-        
-        // Automatically close the message modal after 3 seconds
-        setTimeout(() => {
-            setIsMessageModalOpen(false);
-        }, 3000);
     };
+    
 
     // Handler for opening the user details modal
     const handleUserClick = (user) => {
@@ -116,7 +115,7 @@ const UserManagement = () => {
 
     return (
         <div className="user-management-container">
-            <h1>User Management</h1>
+            <h1>User Accounts</h1>
 
             {/* Modal for adding a new admin */}
             {isModalOpen && (
@@ -157,7 +156,7 @@ const UserManagement = () => {
 
             {/* Message Modal */}
             {isMessageModalOpen && (
-                <div className="message-modal">
+                <div style={{zIndex: "10000"}} className="message-modal">
                     <div className="message-modal-content">
                         <p>{message}</p>
                         <button onClick={() => setIsMessageModalOpen(false)}>Close</button>
@@ -169,7 +168,7 @@ const UserManagement = () => {
             <table className="user-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>User ID</th>
                         <th>Username</th>
                         <th>Email</th>
                         <th>Role</th>

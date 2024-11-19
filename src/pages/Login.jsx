@@ -59,7 +59,6 @@ const Login = () => {
             <div className="login-container" style={{ padding: "20px" }}>
                 <div className="hero">
                     <img className="login-logo" src={logo} alt="Logo" />
-                    <img className="circle" src={circle} alt="Circle" />
                 </div>
                 <form onSubmit={handleLogin}>
                     <input
