@@ -17,11 +17,15 @@ CREATE TABLE usertb (
     userid INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL, 
-    role ENUM('user', 'admin') NOT NULL,
+    role ENUM('store owner', 'admin') NOT NULL,
     email VARCHAR(100) NOT NULL
 );
 
 INSERT INTO usertb (username, password, role, email)
 VALUES ('admin', 'admin123', 'admin', 'admin@gmail.com');
+
+
+INSERT INTO usertb (username, password, role, email)
+VALUES ('owner', 'owner123', 'store owner', 'owner@gmail.com');
 
 
