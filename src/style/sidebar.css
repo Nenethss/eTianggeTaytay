@@ -1,0 +1,39 @@
+/* Sidebar Container */
+.sidebar {
+    width: 350px;
+    background-color: #d9d9d9;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Sidebar Button Styles */
+.sidebar-button {
+    width: 100%;
+    background-color: #b6b6b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-button:hover {
+    background-color: #a7a7a7; /* Lighter gray on hover */
+}
+
+.logo { 
+    height: 80px;
+}
+
+.sidebar img {
+    width: 300px;
+    height: 50px;
+}

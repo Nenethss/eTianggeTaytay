@@ -1,0 +1,53 @@
+/* Full-screen overlay */
+.loading-container {
+    position: fixed;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 238); /* Light background */
+    z-index: 9999; /* Make sure it's on top of everything */
+    animation: slideOut 8s forwards; /* Apply the slide-out animation */
+  }
+  
+  /* Animation to slide the screen to the left */
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0); /* Start at the initial position */
+    }
+    100% {
+      transform: translateX(100%); /* Move the loading screen to the left */
+    }
+  }
+  
+  /* Container for logo and title */
+  .logo-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Logo style */
+  .logo {
+    width: 150px; /* Adjust the size of your logo */
+    margin-bottom: 20px; /* Space between logo and title */
+    height: 54px;
+    width: 500px;
+  }
+  
+  .circle {
+    height: 268px;
+    width: 268px;
+  }
+
+  /* Title style */
+  .title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
