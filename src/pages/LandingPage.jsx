@@ -21,7 +21,7 @@ const LandingPage = () => {
                 </div>
             </div>
             <footer className="landing-footer">
-                <p>&copy; 2024 Taytay Tiangge. All rights reserved.</p>
+                <p>e-Tiangge Portal © 2024. All Rights Reserved</p>
             </footer>
         </div>
     );

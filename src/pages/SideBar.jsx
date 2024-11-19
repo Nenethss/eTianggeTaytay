@@ -1,10 +1,11 @@
 import React from 'react';
 import '../style/sidebar.css';
-import logo from "../assets/logo-taytay.png";
+import logo from "../assets/logo.png";
 import cog from "../assets/cog.png";
 import account from "../assets/account.png";
 import dashboard from "../assets/dashboard.png";
 import logout from "../assets/logout.png";
+import report from "../assets/report.png";
 
 const Sidebar = ({ onAccountClick, onLogout }) => {
     return (
@@ -23,6 +24,12 @@ const Sidebar = ({ onAccountClick, onLogout }) => {
                 <img src={account} alt="" />
                 </div>
                 Account
+            </button>
+            <button  className="sidebar-button">
+                <div>
+                <img src={report} alt="" />
+                </div>
+                Reports
             </button>
             <button  className="sidebar-button">
                 <div>

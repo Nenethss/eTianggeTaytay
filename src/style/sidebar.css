@@ -1,12 +1,13 @@
 /* Sidebar Container */
 .sidebar {
-    background-color: #d9d9d9;
+    background-color: white;
     color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    border-right: 1px solid blue;
 }
 
 .logout {
@@ -52,7 +53,7 @@
 }
 
 .logo { 
-    height: 150px;
+    height: 350px;
 }
 
 .logo img {
@@ -60,8 +61,7 @@
 }
 
 .logout {
-    display: flex
-    ;
+    display: flex;
         height: 100%;
         align-items: flex-end;
         width: 100%;
